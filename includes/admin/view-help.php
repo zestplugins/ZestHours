@@ -55,14 +55,22 @@ if ( ! class_exists( 'ZestHoursMenuHelpPage' ) ) {
 					<div class="zesthours-help-tab-content">
 						<div id="zesthours-welcome-tab" class="zesthours-help-tab zesthours-help-tab-active">
 							<div>
-								<h3><?php esc_html_e( 'Thank You For choosing ZestHours.', 'zesthours' ); ?></h3>
+								<h3><?php esc_html_e( '💐 Thank You For choosing ZestHours.', 'zesthours' ); ?></h3>
 								<p><?php esc_html_e( 'Better, beautiful and flexible business hours management and display.', 'zesthours' ); ?></p>
 							</div>
 						</div>
 			
 						<div id="zesthours-support-tab" class="zesthours-help-tab">
-							<h2><?php esc_html_e( 'Support', 'zesthours' ); ?></h2>
-							<!-- Add support content here -->
+							<h3><?php esc_html_e( '🚑 Require assistance? Our support team is ready to assist you.', 'zesthours' ); ?></h3>
+							<div class="zesthours-supp">								
+								<p><a href=""><?php esc_html_e( 'ZestHours Documentation => ', 'zesthours' ); ?></a>Our documentation comprehensively covers all you require, from installation instructions and hours management to troubleshooting common issues and expanding functionality.</p>
+							</div>
+							<div class="zesthours-supp">								
+								<p><a href=""><?php esc_html_e( 'ZestHours Bug Report => ', 'zesthours' ); ?></a>Stumbled upon an issue or a bug? We appreciate your help in making our product better. Please take a moment to report it, and we'll work diligently to address it.</p>
+							</div>
+							<div class="zesthours-supp">								
+								<p><a href=""><?php esc_html_e( 'ZestHours Feature Request => ', 'zesthours' ); ?></a>Have a great idea for a new feature or improvement? We'd love to hear your suggestions! Share your thoughts with us, and we'll consider implementing it to enhance our product.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -73,6 +81,9 @@ if ( ! class_exists( 'ZestHoursMenuHelpPage' ) ) {
 				.zesthours-help-tabs {
 					font-family: Arial, sans-serif;
 					padding-left: 10px;
+				}
+				.zesthours-supp a{
+					text-decoration: none;
 				}
 		
 				.zesthours-help-main {
