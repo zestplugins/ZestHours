@@ -98,8 +98,8 @@ if ( ! class_exists( 'ZestHours_Menu_Settings_Page' ) ) {
 			$open_label                 = get_option( 'zesthours_open_label', 'open' );
 			$closing_message            = get_option( 'zesthours_closing_message', 'Sorry we are currently closed!' );
 			$close_label                = get_option( 'zesthours_close_label', 'closed' );
-			$bg_color                   = get_option( 'zesthours_bg_color', '#fee' );
-			$header_bg_color            = get_option( 'zesthours_header_bg_color', 'rgb(214, 103, 188)' );
+			$bg_color                   = get_option( 'zesthours_bg_color', '#ecf0f1' );
+			$header_bg_color            = get_option( 'zesthours_header_bg_color', '#3498db' );
 			$text_color                 = get_option( 'zesthours_text_color', '#000000' );
 			$font_size                  = get_option( 'zesthours_font_size', '14px');
 			$selected_timezone          = get_option( 'zesthours_selected_timezone', 'UTC' );
