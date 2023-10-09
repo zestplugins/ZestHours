@@ -14,7 +14,7 @@
  * Author URI:        https://github.com/zestplugins/ZestHours
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       zest-hours
+ * Text Domain:       zesthours
  * Domain Path:       /languages
  */
 
@@ -26,4 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Current plugin version.
  */
-define( 'Zest_HOURS_VERSION', '0.1.0' );
+define( 'ZESTHOURS_VERSION', '0.1.0' );
+
+require plugin_dir_path( __FILE__ ) . 'includes/includes.php';
