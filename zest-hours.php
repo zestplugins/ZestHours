@@ -6,7 +6,7 @@
  * @package           Business hours management
  *
  * @wordpress-plugin
- * Plugin Name:       ZestHours - Business hours management
+ * Plugin Name:       ZestHours
  * Plugin URI:        https://github.com/zestplugins/ZestHours
  * Description:       Effortlessly display and manage business hours on your website.
  * Version:           0.1.0
