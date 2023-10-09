@@ -30,19 +30,6 @@ if ( ! class_exists( 'ZestHoursMenu' ) ) {
                 'zesthours_menu_manage_page',
                 'dashicons-clock'
             );
-            
-            // Add the Settings submenu
-            add_submenu_page(
-                'zesthours_menu',
-                __('Settings', 'zesthours'),
-                __('Settings', 'zesthours'),
-                'manage_options',
-                'zesthours_menu_settings',
-                'zesthours_menu_settings_page'
-            );
-
-            // Remove the submenu page for 'zesthours_menu'
-            remove_submenu_page( 'zesthours_menu', 'zesthours_menu' );
         }
     }
 }
