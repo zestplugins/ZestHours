@@ -41,16 +41,6 @@ if ( ! class_exists( 'ZestHoursMenu' ) ) {
                 'zesthours_menu_settings_page'
             );
 
-            // Add the Help submenu
-            add_submenu_page(
-                'zesthours_menu',
-                __('Help', 'zesthours'),
-                __('Help', 'zesthours'),
-                'manage_options',
-                'zesthours_menu_help',
-                'zesthours_menu_help_page'
-            );
-
             // Remove the submenu page for 'zesthours_menu'
             remove_submenu_page( 'zesthours_menu', 'zesthours_menu' );
         }
