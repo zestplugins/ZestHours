@@ -75,65 +75,7 @@ if ( ! class_exists( 'ZestHoursMenuHelpPage' ) ) {
 					</div>
 				</div>
 			</section>
-			
-			<style>
-				/* Style for tabs */
-				.zesthours-help-tabs {
-					font-family: Arial, sans-serif;
-					padding-left: 10px;
-				}
-				.zesthours-supp a{
-					text-decoration: none;
-				}
-		
-				.zesthours-help-main {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-					text-align: center;
-					background-color: black;
-					min-height: 100px;
-				}
-		
-				.zesthours-help-tab-links {
-					display: flex;
-					list-style: none;
-					padding: 0;
-					margin: 0;
-				}
-		
-				.zesthours-help-tab-links li {
-					margin-right: 10px;
-				}
-		
-				.zesthours-help-tab-links a {
-					text-decoration: none;
-					background-color: #f2f2f2;
-					padding: 10px 20px;
-					border: 1px solid #ccc;
-					border-radius: 5px;
-				}
-		
-				.zesthours-help-tab-links a:hover {
-					background-color: #ddd;
-				}
-		
-				.zesthours-help-tab-links .zesthours-help-tab-active a {
-					background-color: #fff;
-					border: 1px solid #ddd;
-				}
-		
-				/* Style for tab content */
-				.zesthours-help-tab {
-					display: none;
-				}
-		
-				.zesthours-help-tab-active {
-					display: block;
-				}
-			</style>
-		
+					
 			<script>
 				document.addEventListener("DOMContentLoaded", function() {
 					const tabLinks = document.querySelectorAll(".zesthours-help-tab-links a");

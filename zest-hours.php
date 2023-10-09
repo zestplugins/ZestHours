@@ -29,6 +29,20 @@ define( 'ZESTHOURS_VERSION', '0.1.0' );
 require plugin_dir_path( __FILE__ ) . 'includes/includes.php';
 
 /**
+ * Enqueue CSS and JavaScript files.
+ *
+ * This function enqueues the necessary CSS and JavaScript files for the ZestHours plugin.
+ *
+ * @since 0.1.0
+ */
+function zesthours_enqueue_scripts() {
+    wp_enqueue_style( 'zesthours-style', plugin_dir_url( __FILE__ ) . 'assets/css/zesthours-main.css', array(), '0.1.0' );
+    wp_enqueue_script( 'zesthours-script', plugin_dir_url( __FILE__ ) . 'assets/js/zesthours-main.js', array( 'jquery' ), '0.1.0', true );
+}
+add_action( 'admin_enqueue_scripts', 'zesthours_enqueue_scripts' );
+
+
+/**
  * Add custom action link to the plugin's action links.
  *
  * @param array $links Existing plugin action links.
