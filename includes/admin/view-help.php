@@ -1,9 +1,7 @@
 <?php 
 
-// If this file is called directly, abort.
-if ( ! defined( 'ABSPATH' ) ) {
-    die;
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 function zesthours_menu_help_page() {
     ?>
