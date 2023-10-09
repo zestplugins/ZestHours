@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: black;
+    background-color: #3498db;
     min-height: 100px;
 }
 
@@ -55,29 +55,29 @@
 .zesthours-settings-tabs {
     display: flex;
     max-width: 630px;
-    background-color: #fee;
+    background-color: #3498db;
 }
 
 .settings-content{
     max-width: 630px;
-    background-color: #fee;
+    background-color: #3498db;
 }
 .zesthours-settings-tab {
     padding: 10px 13px;
-    background-color: rgb(250, 214, 239);
+    background-color: #ecf0f1;
     cursor: pointer;
-    border: 1px solid rgb(214, 103, 188);
+    border: 1px solid #ecf0f1;
     border-bottom: none;
     margin-right: 10px;
 }
 
 .zesthours-settings-tab-content {
     display: none;
-    border: 1px solid rgb(214, 103, 188);
+    border: 1px solid #ecf0f1;
     padding: 20px;
-    background-color: #fee;
+    background-color: #3498db;
     min-height: 300px;
 }
 .zesthours-settings-active-tab {
-    background-color: #fee;
+    background-color: rgb(236, 233, 233);
 }

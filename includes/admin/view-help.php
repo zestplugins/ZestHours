@@ -41,7 +41,7 @@ if ( ! class_exists( 'ZestHoursMenuHelpPage' ) ) {
 		 */
 		public function menu_help_page() {
 			?>
-			<section style="background-color: #fdfdfd; margin-right: 15px; margin-top: 15px; min-height: 100svh;">
+			<section style="background-color: #ecf0f1; margin-right: 15px; margin-top: 15px; min-height: 100svh;">
 				<div class="zesthours-help-main">
 					<h1 style="color: whitesmoke;"><?php esc_html_e( 'ZestHours', 'zesthours' ); ?></h1>
 				</div>            

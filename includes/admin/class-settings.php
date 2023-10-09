@@ -117,7 +117,7 @@ if ( ! class_exists( 'ZestHours_Menu_Settings_Page' ) ) {
 					<form method="post" class="settings-content">
 						<!-- start of tab -->
 						<div id="content-zesthours-settings-tab-general" class="zesthours-settings-tab-content" style="display: block;">
-						<p><span class="copy-business-hours-shortcode"> short code to use [ZestHours]</span></p>
+							<p><span class="copy-business-hours-shortcode"> short code to use [ZestHours]</span></p>
 		
 							<?php
 							$current_local_time = date( 'H:i', current_time( 'timestamp', true ) );
@@ -259,7 +259,7 @@ if ( ! class_exists( 'ZestHours_Menu_Settings_Page' ) ) {
 						<!-- end of tab -->
 		
 						<p class="submit">
-							<input type="submit" name="submit" id="submit" class="button" style="margin-left: 5px; border: 2px solid #fff; color: white; background-color: rgb( 151, 25, 122 );" value="<?php esc_attr_e( 'Save Changes', 'zesthours' ); ?>">
+							<input type="submit" name="submit" id="submit" class="button" style="margin-left: 5px; border: 2px solid #fff; color: black; background-color: #ecf0f1;" value="<?php esc_attr_e( 'Save Changes', 'zesthours' ); ?>">
 						</p>
 		
 					</form>
