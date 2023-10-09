@@ -51,3 +51,33 @@
 .zesthours-help-tab-active {
     display: block;
 }
+
+.zesthours-settings-tabs {
+    display: flex;
+    max-width: 630px;
+    background-color: #fee;
+}
+
+.settings-content{
+    max-width: 630px;
+    background-color: #fee;
+}
+.zesthours-settings-tab {
+    padding: 10px 13px;
+    background-color: rgb(250, 214, 239);
+    cursor: pointer;
+    border: 1px solid rgb(214, 103, 188);
+    border-bottom: none;
+    margin-right: 10px;
+}
+
+.zesthours-settings-tab-content {
+    display: none;
+    border: 1px solid rgb(214, 103, 188);
+    padding: 20px;
+    background-color: #fee;
+    min-height: 300px;
+}
+.zesthours-settings-active-tab {
+    background-color: #fee;
+}
