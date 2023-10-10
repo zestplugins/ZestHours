@@ -101,7 +101,7 @@ if (!class_exists('ZestHours_Shortcode')) {
                     $closing_hours_display = !empty($closing_hours) ? $closing_hours : '';
                 }
 
-                $output .= '<li><strong>' . esc_html(ucfirst($day)) . ':</strong> ' . esc_html($opening_hours_display);
+                $output .= '<li style="list-style: none;"><strong>' . esc_html(ucfirst($day)) . ':</strong> ' . esc_html($opening_hours_display);
                 if (!empty($closing_hours_display)) {
                     $output .= ' - ' . esc_html($closing_hours_display);
                 }
