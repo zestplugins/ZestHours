@@ -23,7 +23,7 @@ if (!class_exists('ZestHours_Shortcode')) {
          */
         public function register_shortcode()
         {
-            add_shortcode('zesthours', array($this, 'zesthours_shortcode'));
+            add_shortcode('ZestHours', array($this, 'zesthours_shortcode'));
         }
 
         public function zesthours_shortcode($atts)
@@ -86,28 +86,42 @@ if (!class_exists('ZestHours_Shortcode')) {
 
             $output .= '<div style="background-color: ' . esc_attr($bg_color) . '; padding: 3px 5px">';
             // Display opening and closing hours for each day.
-            $days = array('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday');
-            $output .= '<ul class="zesthours-opening-hours-list " style="margin-bottom: 0;">';
-            foreach ($days as $day) {
-                $opening_hours = get_option("zesthours_opening_hours_$day", '08:00');
-                $closing_hours = get_option("zesthours_closing_hours_$day", '17:00');
+            $days = array('MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY');
+            $output .= '<div class="zesthours-opening-hours-container">';
+                $output .= '<table class="zesthours-opening-hours-table" style="width:100%;">';
+                    $output .= '<tbody>';
 
-                // Convert hours to selected time format for display only.
-                if ($time_format === '12-hour') {
-                    $opening_hours_display = !empty($opening_hours) ? date('h:i A', strtotime($opening_hours)) : 'Closed';
-                    $closing_hours_display = !empty($closing_hours) ? date('h:i A', strtotime($closing_hours)) : '';
-                } else {
-                    $opening_hours_display = !empty($opening_hours) ? $opening_hours : 'Closed';
-                    $closing_hours_display = !empty($closing_hours) ? $closing_hours : '';
-                }
+                    foreach ($days as $day) {
+                        $opening_hours = get_option("zesthours_opening_hours_$day", '08:00');
+                        $closing_hours = get_option("zesthours_closing_hours_$day", '17:00');
 
-                $output .= '<li><strong>' . esc_html(ucfirst($day)) . ':</strong> ' . esc_html($opening_hours_display);
-                if (!empty($closing_hours_display)) {
-                    $output .= ' - ' . esc_html($closing_hours_display);
-                }
-                $output .= '</li>';
-            }
-            $output .= '</ul>';
+                        // Convert hours to selected time format for display only.
+                        if ($time_format === '12-hour') {
+                            $opening_hours_display = !empty($opening_hours) ? date('h:i A', strtotime($opening_hours)) : 'Closed';
+                            $closing_hours_display = !empty($closing_hours) ? date('h:i A', strtotime($closing_hours)) : '';
+                        } else {
+                            $opening_hours_display = !empty($opening_hours) ? $opening_hours : 'Closed';
+                            $closing_hours_display = !empty($closing_hours) ? $closing_hours : '';
+                        }
+
+                        $output .= '<tr>';
+                        $output .= '<td><strong>' . esc_html(ucfirst($day)) . '</strong></td>';
+                        $output .= '<td>' . esc_html($opening_hours_display) . '</td>';
+                        
+                        // Display a hyphen between opening and closing hours if both are not "Closed".
+                        if ($opening_hours_display !== 'Closed' && $closing_hours_display !== 'Closed') {
+                            $output .= '<td>-</td>';
+                        } else {
+                            $output .= '<td></td>';
+                        }
+
+                        $output .= '<td>' . esc_html($closing_hours_display) . '</td>';
+                        $output .= '</tr>';
+                    }
+
+                    $output .= '</tbody>';
+                $output .= '</table>';
+            $output .= '</div>';
 
             $output .= '<div class="zesthours-display-message" style="margin-top: 20px; text-align: left;" style="margin: 0;">';
             if ($is_open) {

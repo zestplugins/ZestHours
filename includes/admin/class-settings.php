@@ -237,29 +237,69 @@ if ( ! class_exists( 'ZestHours_Menu_Settings_Page' ) ) {
 					<!-- End of tab -->
 	
 					<!-- start of tab -->
-					<div id="content-zesthours-settings-tab-appearance" class="zesthours-settings-tab-content" style="display: flex; flex-direction: column;">           
-						<h3><?php esc_html_e( 'Appearance', 'zesthours' ); ?></h3>
-						<div style="margin-bottom: 7px;">
-							<label for="bg_color"><?php esc_html_e( 'Background Color:', 'zesthours' ); ?></label>
-							<input type="color" name="bg_color" id="bg_color" value="<?php echo esc_attr( $bg_color ); ?>" />
+					<div id="content-zesthours-settings-tab-appearance" class="zesthours-settings-tab-content">
+						<div style="display: flex;">
+							<div class="zesthours-settings-column">
+								<div class="zesthours-settings-row-label">
+									<label for="bg_color"><?php esc_html_e( 'Background Color:', 'zesthours' ); ?></label>
+								</div>
+
+								<div class="zesthours-settings-row-label">
+									<label for="header_bg_color"><?php esc_html_e( 'Header Background Color:', 'zesthours' ); ?></label>
+								</div>
+
+								<div class="zesthours-settings-row-label">
+									<label for="text_color"><?php esc_html_e( 'Text Color:', 'zesthours' ); ?></label>
+								</div>
+
+								<div class="zesthours-settings-row-label">
+									<label for="font_size"><?php esc_html_e( 'Font Size:', 'zesthours' ) ?></label>
+								</div>
+							</div>
+							<div class="zesthours-settings-column">
+								<div class="zesthours-settings-row">
+									<input type="color" name="bg_color" id="bg_color" value="<?php echo esc_attr( $bg_color ); ?>" />
+								</div>
+
+								<div class="zesthours-settings-row">
+									<input type="color" name="header_bg_color" id="header_bg_color" value="<?php echo esc_attr( $header_bg_color ); ?>" />
+								</div>
+
+								<div class="zesthours-settings-row">
+									<input type="color" name="text_color" id="text_color" value="<?php echo esc_attr( $text_color ); ?>" />
+								</div>
+
+								<div class="zesthours-settings-row">
+									<input type="text" name="font_size" id="font_size" value="<?php echo esc_attr( $font_size ); ?>" />
+								</div>
+							</div>
 						</div>
-	
-						<div style="margin-bottom: 7px;">
-							<label for="header_bg_color"><?php esc_html_e( 'Header Background Color:', 'zesthours' ); ?></label>
-							<input type="color" name="header_bg_color" id="header_bg_color" value="<?php echo esc_attr( $header_bg_color ); ?>" />
-						</div>
-	
-						<div style="margin-bottom: 7px;">
-							<label for="text_color"><?php esc_html_e( 'Text Color:', 'zesthours' ); ?></label>
-							<input type="color" name="text_color" id="text_color" value="<?php echo esc_attr( $text_color ); ?>" />
-						</div>
-	
-						<div style="margin-bottom: 7px;">
-							<label for="font_size"><?php esc_html_e( 'Font Size:', 'zesthours' ) ?></label>
-							<input type="text" name="font_size" id="font_size" value="<?php echo esc_attr( $font_size ); ?>" />
-						</div>
+						
 					</div>
-					<!-- end of tab -->
+
+					<style>
+					.zesthours-settings-column {
+						display: flex;
+						flex-direction: column;
+						margin-right: 20px;
+					}
+
+					/* Style for the labels in the left column */
+					.zesthours-settings-row {
+						margin-bottom: 10px;
+					}
+					.zesthours-settings-row-label{
+						margin-bottom: 20px;
+						font-weight: bold;
+					}
+
+					/* Style for the input elements in the right column */
+					.zesthours-settings-row input[type="color"],
+					.zesthours-settings-row input[type="text"] {
+						width: 100%;
+					}
+
+					</style>
 	
 					<p class="submit">
 						<input type="submit" name="submit" id="submit" class="button" style="margin-left: 5px; border: 2px solid #fff; color: black; background-color:  #3498db;" value="<?php esc_attr_e( 'Save Changes', 'zesthours' ); ?>">

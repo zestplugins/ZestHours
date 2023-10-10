@@ -54,9 +54,21 @@ if ( ! class_exists( 'ZestHoursMenuHelpPage' ) ) {
 			
 					<div class="zesthours-help-tab-content">
 						<div id="zesthours-welcome-tab" class="zesthours-help-tab zesthours-help-tab-active">
-							<div>
-								<h3><?php esc_html_e( '💐 Thank You For choosing ZestHours.', 'zesthours' ); ?></h3>
-								<p><?php esc_html_e( 'Better, beautiful and flexible business hours management and display.', 'zesthours' ); ?></p>
+							<div style="background-color: #ecf0f1; padding: 20px; margin: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+								<h3 style="color: #3498db;"><?php esc_html_e( '💐 Thank You For choosing ZestHours.', 'zesthours' ); ?></h3>
+								<p><?php esc_html_e( 'Better, beautiful, and flexible business hours management and display. ZestHours offers you a better way to manage and display your business hours. With a beautiful and flexible design, you can customize your opening and closing hours to fit your needs. Make a great first impression on your customers with ZestHours.', 'zesthours' ); ?></p>
+							</div>
+
+							
+							<div style="background-color: #ecf0f1; padding: 20px; margin: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+								<h3 style="color: #3498db;"><?php esc_html_e( 'Configure Your Business Hours', 'zesthours' ); ?></h3>								
+								<p><?php esc_html_e( 'With ZestHours, you have the flexibility to set up your business hours exactly the way you want. You can customize the appearance of your business hours display and the messages to be shown when you are open or closed.', 'zesthours' ); ?></p>
+								<a href="<?php echo esc_url( admin_url( 'admin.php?page=zesthours_menu_settings' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Configure Hours Now', 'zesthours' ); ?></a>
+							</div>
+
+							<div style="background-color: #ecf0f1; padding: 20px; margin: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+								<h3 style="color: #3498db;"><?php esc_html_e( 'Display Your Business Hours', 'zesthours' ); ?></h3>
+								<p><?php esc_html_e( 'Use the [ZestHours] shortcode to display your business hours on any page or post. Simply insert the shortcode where you want your business hours to appear.', 'zesthours' ); ?></p>
 							</div>
 						</div>
 			
