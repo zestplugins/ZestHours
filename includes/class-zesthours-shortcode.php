@@ -23,7 +23,7 @@ if (!class_exists('ZestHours_Shortcode')) {
          */
         public function register_shortcode()
         {
-            add_shortcode('zesthours', array($this, 'zesthours_shortcode'));
+            add_shortcode('ZestHours', array($this, 'zesthours_shortcode'));
         }
 
         public function zesthours_shortcode($atts)
