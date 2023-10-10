@@ -55,3 +55,24 @@ function zesthours_management_add_actions_link( $links ) {
     return $links;
 }
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'zesthours_management_add_actions_link' );
+
+/**
+ * Redirect to the help page after plugin activation.
+ */
+function zesthours_redirect_to_help_page() {
+    if ( is_admin() && get_option( 'zesthours_activation_redirect', false ) ) {
+        delete_option( 'zesthours_activation_redirect' );
+        wp_safe_redirect( admin_url( 'admin.php?page=zesthours_menu_help' ) );
+        exit;
+    }
+}
+register_activation_hook( __FILE__, 'zesthours_set_activation_redirect' );
+
+/**
+ * Set the activation redirect flag.
+ */
+function zesthours_set_activation_redirect() {
+    update_option( 'zesthours_activation_redirect', true );
+}
+
+add_action( 'admin_init', 'zesthours_redirect_to_help_page' );
