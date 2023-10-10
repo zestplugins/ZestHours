@@ -3,7 +3,7 @@
  * Plugin Name: ZestHours
  * Description: Effortlessly display and manage business hours on your website.
  * Version: 0.1.0
- * Author: zestplugins
+ * Author: ZestPlugins
  * Author URI: https://github.com/zestplugins/ZestHours
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
