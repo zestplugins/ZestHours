@@ -49,8 +49,8 @@ add_action( 'admin_enqueue_scripts', 'zesthours_enqueue_scripts' );
  * @return array Modified plugin action links.
  */
 function zesthours_management_add_actions_link( $links ) {
-    $settings_link = '<a href="' . admin_url( 'admin.php?page=zesthours_menu_settings' ) . '">' . esc_html__( 'Settings', 'zesthours' ) . '</a>';
-    $help_link     = '<a href="' . admin_url( 'admin.php?page=zesthours_menu_help' ) . '">' . esc_html__( 'Help', 'zesthours' ) . '</a>';
+    $settings_link = '<a href="' . admin_url( 'admin.php?page=zesthours_menu_settings' ) . '" style="font-weight: bold;">' . esc_html__( 'Settings', 'zesthours' ) . '</a>';
+    $help_link     = '<a href="' . admin_url( 'admin.php?page=zesthours_menu_help' ) . '" style="font-weight: bold;">' . esc_html__( 'Help', 'zesthours' ) . '</a>';
     array_push( $links, $settings_link, $help_link );
     return $links;
 }
